@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Accordion, Icon, Popup, Segment, Grid } from 'semantic-ui-react'
-import {Line} from 'react-chartjs-2'
+import { Accordion, Icon, Popup, Segment, Grid, Container } from 'semantic-ui-react'
+import { Line } from 'react-chartjs-2'
+import SecondBar from './SecondBar'
 
 export default class FirstAccordion extends Component {
   state = { activeIndex: 0 }
@@ -25,39 +26,39 @@ export default class FirstAccordion extends Component {
             Hematologi
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 0}>
-            <Grid>
-              <Grid.Column>
-                <Popup
-                  trigger={<span>Hemogoblin</span>}
-                  content="informasi default hemogoblin"
-                  basic />
-              </Grid.Column>
-              <Grid.Column>
-                ntar di isi bar
-              </Grid.Column>
-            </Grid>
-            <Grid>
-              <Grid.Column>
-                <Popup
-                  trigger={<span>LED</span>}
-                  content="informasi default LED"
-                  basic />
-              </Grid.Column>
-              <Grid.Column>
-
-              </Grid.Column>
-            </Grid>
-            <Grid>
-              <Grid.Column>
-                <Popup
-            trigger={<span>Lecosit</span>}
-            content="informasi default Lecosit"
-            basic/>
-              </Grid.Column>
-              <Grid.Column>
-
-              </Grid.Column>
-            </Grid>
+              <Grid columns='equal'>
+                <Grid.Column>
+                  <Popup
+                    trigger={<span>Hemogoblin</span>}
+                    content="informasi default hemogoblin"
+                    basic />
+                </Grid.Column>
+                <Grid.Column width={12}>
+                  <SecondBar bar1="40%" bar2="20%" bar3="40%" message="Normal" popContent="12.0" left="10000" top="30"/>
+                </Grid.Column>
+              </Grid>
+              <Grid columns='equal'>
+                <Grid.Column>
+                  <Popup
+                    trigger={<span>LED</span>}
+                    content="informasi default LED"
+                    basic />
+                </Grid.Column>
+                <Grid.Column width={12}>
+                <SecondBar bar1="55%" bar2="45%" message="Normal" popContent="18.0" left="200" top="30"/>
+                </Grid.Column>
+              </Grid>
+              <Grid columns='equal'>
+                <Grid.Column>
+                  <Popup
+                    trigger={<span>Lecosit</span>}
+                    content="informasi default Lecosit"
+                    basic />
+                </Grid.Column>
+                <Grid.Column width={12}>
+                <SecondBar bar1="10%" bar2="20%" bar3="70%" message="Normal" popContent="7.30" left="200" top="30"/>
+                </Grid.Column>
+              </Grid>
           </Accordion.Content>
         </Accordion>
       </Segment>

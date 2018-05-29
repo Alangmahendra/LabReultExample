@@ -27,7 +27,6 @@ export default class Summary extends Component {
     return (
       <Card fluid style={height}>
         <Icon style={margining} name="arrow left" >
-          Back
         </Icon>
         <Container style={separator}>
           <Grid columns='equal'>

@@ -39,7 +39,7 @@ export default class Headers extends Component {
             </Menu.Item>
           </Menu.Menu>
         </Menu>
-        <div style={left}>  Home / Chart</div>
+        <div style={left}>Home / Chart</div>
       </Card>
     )
   }
