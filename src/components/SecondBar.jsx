@@ -1,48 +1,48 @@
 import React, { Component } from 'react'
 import './SecondBar.css'
 import { Popover, OverlayTrigger } from 'react-bootstrap'
-import {Line} from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2'
 
 
 
 export default class SeconBar extends Component {
 
-    
+
     render() {
-        const data={
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'],
+        const data = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
             datasets: [
-              {
-                label: this.props.title,
-                fill: false,
-                lineTension: 0.1,
-                backgroundColor: 'rgba(75,192,192,0.4)',
-                borderColor: 'rgba(75,192,192,1)',
-                borderCapStyle: 'butt',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: 'rgba(75,192,192,1)',
-                pointBackgroundColor: '#fff',
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-                pointHoverBorderColor: 'rgba(220,220,220,1)',
-                pointHoverBorderWidth: 2,
-                pointRadius: 1,
-                pointHitRadius: 10,
-                data: [2.0,2.8, 3.0, 1.2,1.8, 1.9, 4.0,5.6,6.0,6.3,4.8,2.8,3.4,4.8]
-              }
+                {
+                    label: this.props.title,
+                    fill: false,
+                    lineTension: 0.1,
+                    backgroundColor: 'rgba(75,192,192,0.4)',
+                    borderColor: 'rgba(75,192,192,1)',
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: 'rgba(75,192,192,1)',
+                    pointBackgroundColor: '#fff',
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+                    pointHoverBorderColor: 'rgba(220,220,220,1)',
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [2.0, 2.8, 3.0, 1.2, 1.8, 1.9, 4.0, 5.6, 6.0, 6.3, 4.8, 2.8, 3.4, 4.8]
+                }
             ]
-          };
+        };
 
         const popover = (
             <Popover
                 id="popover-basic"
                 placement="top"
-                positionLeft={this.props.left}
-                positionTop={this.props.top}>
-                <Line data={data} width={1000} height={800}/>
+                positionLeft={Number(this.props.left)}
+                positionTop={Number(this.props.top)}>
+                <Line data={data} width={1000} height={800} />
             </Popover>
         )
         const bar1 = {
@@ -60,9 +60,8 @@ export default class SeconBar extends Component {
                 <div>
                     <Popover id="popover-basic"
                         placement="top"
-                        positionLeft={this.props.left}
-                        positionTop={this.props.top}
-                    >
+                        positionLeft={Number(this.props.left)}
+                        positionTop={Number(this.props.top)}>   
                         {this.props.popContent}
                     </Popover>
                     <div className="stacked-bar-graph">
@@ -73,32 +72,32 @@ export default class SeconBar extends Component {
                 </div>
             )
         } else {
-            if(this.props.title){
+            if (this.props.title) {
                 return (
                     <OverlayTrigger placement="top" overlay={popover}>
-                    <div>
-                        <Popover id="popover-basic"
-                            placement="top"
-                            positionLeft={this.props.left}
-                            positionTop={this.props.top}
-                        >
-                            {this.props.popContent}
-                        </Popover>
-                        <div className="stacked-bar-graph">
-                            <span style={bar1} className="bar-2"> {this.props.message} </span>
-                            <span style={bar2} className="bar-1">  </span>
+                        <div>
+                            <Popover id="popover-basic"
+                                placement="top"
+                                positionLeft={Number(this.props.left)}
+                                positionTop={Number(this.props.top)}>
+                                
+                                {this.props.popContent}
+                            </Popover>
+                            <div className="stacked-bar-graph">
+                                <span style={bar1} className="bar-2"> {this.props.message} </span>
+                                <span style={bar2} className="bar-1">  </span>
+                            </div>
                         </div>
-                    </div>
                     </OverlayTrigger>
                 )
-            }else {
+            } else {
                 return (
                     <div>
                         <Popover id="popover-basic"
                             placement="top"
-                            positionLeft={this.props.left}
-                            positionTop={this.props.top}
-                        >
+                            positionLeft={Number(this.props.left)}
+                            positionTop={Number(this.props.top)}>
+                            
                             {this.props.popContent}
                         </Popover>
                         <div className="stacked-bar-graph">

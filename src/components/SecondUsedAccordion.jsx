@@ -13,7 +13,7 @@ const Imunoserologi = [
           basic />
       </Grid.Column>
       <Grid.Column width={12}>
-        <SecondBar bar1="20%" bar2="80%" message="Normal" popContent="5.0" title="CRP Kuantitatif"/>
+        <SecondBar bar1="20%" bar2="80%" message="Normal" popContent="5.0" title="CRP Kuantitatif" left="120" top="-1"/>
       </Grid.Column>
     </Grid>]
   },

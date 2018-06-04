@@ -34,7 +34,7 @@ export default class FirstAccordion extends Component {
                     basic />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                  <SecondBar bar1="40%" bar2="20%" bar3="40%" message="Normal" popContent="12.0" left="10000" top="30"/>
+                  <SecondBar bar1="40%" bar2="20%" bar3="40%" message="Normal" popContent="12.0" left="340" top="-1"/>
                 </Grid.Column>
               </Grid>
               <Grid columns='equal'>
@@ -45,7 +45,7 @@ export default class FirstAccordion extends Component {
                     basic />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                <SecondBar bar1="55%" bar2="45%" message="Normal" popContent="18.0" left="200" top="30"/>
+                <SecondBar bar1="55%" bar2="45%" message="Normal" popContent="18.0" left="650" top="-1"/>
                 </Grid.Column>
               </Grid>
               <Grid columns='equal'>
@@ -56,7 +56,7 @@ export default class FirstAccordion extends Component {
                     basic />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                <SecondBar bar1="10%" bar2="20%" bar3="70%" message="Normal" popContent="7.30" left="200" top="30"/>
+                <SecondBar bar1="10%" bar2="20%" bar3="70%" message="Normal" popContent="7.30" left="180" top="-1"/>
                 </Grid.Column>
               </Grid>
           </Accordion.Content>
